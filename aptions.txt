@@ -1,0 +1,26 @@
+cookies 
+
+	and they are SUPER SECURE!!!
+	Distant voice: But cookies are also accessible through javascript.
+	That’s true, but only if the server doesn’t set the HttpOnly flag
+
+	Distant voice: Of course not, what if someone sents them through a non-secure HTTP request?
+	
+	CSRF attack?
+	A CSRF attack is performed when an attacker takes advantage of the browser’s default behavior, 
+	to send all cookies even on cross-domain requests.
+	
+	Example : The attacker sends an email with a beautiful offer, and adds a CTA button at the end, “GET A 50% DISCOUNT”.
+	The user is thrilled by this awesome offer and clicks the button.
+	In reality, the button submits a POST form to your web application, 
+	and more specifically to the endpoint that changes the user’s password with a new one.
+	Because cookies are sent in every request, even cross-domain ones, 
+	the endpoint works as expected if the user has logged in, in an earlier step to your web application.
+	Now the user is logged out and cannot log in to your web application anymore.
+
+
+Content Security Policy (CSP):
+	is an added layer of security that helps to detect and mitigate certain types of attacks, 
+	including Cross-Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft, 
+	to site defacement, to malware distribution.
+	
